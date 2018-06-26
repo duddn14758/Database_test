@@ -56,7 +56,7 @@ article:after, article:before{clear: both; content: '\0020'; display: block; vis
 /* -------------------------------------------- */
 /* ------------------Style--------------------- */
 html, body {width:100%; padding:0; margin:0;}
-body {background: #e0ffff;color: #A5A5A5;font: 16px/25px 'Droid Sans',sans-serif;}
+body {background: #d5d5d5;color: #A5A5A5;font: 16px/25px 'Droid Sans',sans-serif;}
 /*웹페이지 백그라운드 컬러*/
 body .wrap-body{background:#ffffff; margin: 30px auto; padding: 30px;}
 
@@ -70,6 +70,7 @@ a.button:hover{}
 h1, h2, h3{
 	font-size: 25px;
 	line-height: 35px;
+	/*font-family: 'Roboto Slab',sans-serif;*/
 	font-family: 'Roboto Slab',sans-serif;
 	font-weight: 300;
 	color: #474747;

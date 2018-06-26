@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -47,6 +49,18 @@
 </head>
 <body>
 	<div class="wrap-body zerogrid">	
+	<%
+String jdbc_driver="com.mysql.jdbc.Driver";
+String db_url="jdbc:mysql://localhost:3306/mysql"+"?serverTimezone=Asia/Seoul&useSLL=false";
+String db_user="user1";
+String db_passwd="user1";
+String db_table="userinfo";
+Class.forName(jdbc_driver);
+
+Connection conn=DriverManager.getConnection(db_url,db_user,db_passwd);
+
+
+%>
 	
 		<!--------------Header--------------->
 		<header>
@@ -93,7 +107,7 @@
 							<div class="col-lg-6 col-lg-offset-">
 
 								<div class="inner-form">
-									<FORM action="votepage.jsp" method="post">
+									<FORM action="votepage.html">
 
 
 										<h1>로그인하세요</h1>
@@ -111,7 +125,7 @@
 												<div class="col-2-5">
 													<br> <br> <br> <br> <br> <label>ID</label>
 													<div class="form-group">
-														<input type="text" name="id" id="id"
+														<input type="text" name="id" id="email"
 															class="form-control" placeholder="" required/>
 													</div>
 												</div>
@@ -131,6 +145,7 @@
 													</button>
 												</div>
 										</FORM>
+								
 
 								<div class="col-2-5">
 									<div class="forgot">
